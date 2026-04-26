@@ -13,6 +13,7 @@ Browse GitHub repositories directly inside Total Commander as a virtual filesyst
 - Copy files from GitHub to local disk (F5 / drag & drop)
 - Progress bar during file download
 - Personal Access Tokens stored encrypted (Windows DPAPI)
+- Create token from https://github.com/settings/tokens
 - **Global fallback token** for repos without their own token
 - Connection test per repository
 - **[Quick add]** shortcut for adding a repo and navigating to it immediately
