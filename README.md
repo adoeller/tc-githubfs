@@ -16,7 +16,7 @@ Release assets are downloadable.
   - All release assets (`.zip`, `.tar.gz`, etc.) downloadable via F5
 - Navigate branches → directories → files
 - Copy files from GitHub to local disk (F5 / drag & drop) with progress bar
-- Enter archives (`.zip`, `.7z`, `.rar`, …) with Ctrl+PgDn via TC packer plugin
+- Enter archives (`.zip`, `.7z`, `.rar`, …) with ENTER via TC packer plugin
 - Delete configured repositories via DEL/F8 (removes from config, not from GitHub)
 - Personal Access Tokens stored encrypted (Windows DPAPI)
 - **Global fallback token** for repos without an individual token
