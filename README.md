@@ -19,6 +19,7 @@ Release assets are downloadable.
 - Enter archives (`.zip`, `.7z`, `.rar`, …) with ENTER via TC packer plugin
 - Delete configured repositories via DEL/F8 (removes from config, not from GitHub)
 - Personal Access Tokens stored encrypted (Windows DPAPI)
+- Get your token from https://github.com/settings/tokens
 - **Global fallback token** for repos without an individual token
 - Connection test per repository
 - **F7 smart add**: type `owner/repo` to check GitHub and add in one step
