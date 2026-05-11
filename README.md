@@ -5,6 +5,7 @@ Repositories, branches, directories and files appear as TC file entries.
 Release assets are downloadable. Archives can be extracted and browsed in-place.
 
 ---
+NB: Personal access tokens from https://github.com/settings/tokens strongly recommended
 
 ## Features
 
