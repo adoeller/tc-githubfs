@@ -2,6 +2,8 @@
 
 Browse GitHub repositories as a virtual file system directly in Total Commander's Network Neighborhood.
 
+![Preview](Preview.png)
+
 ## Features
 
 - 🌟 **Repository Browsing:** Navigate repositories, branches, and directories as virtual folders
