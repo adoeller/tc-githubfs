@@ -49,10 +49,44 @@ For maximum security, it's recommended to:
 - Double-click files to open them in the viewer
 - Right-click files or directories to download them
 - Use Alt+Enter on a repository to edit its settings
-- Click the "Check Releases" button in the settings dialog to fetch the latest release info for all repositories
+- Click the "Check Updates" button in the settings dialog to fetch latest release and latest commit info for all repositories
+  - Repositories with an access token are checked for releases via a GraphQL batch request
+  - Repositories without a token use the REST release API individually
+- Double-click the "Latest Release" or "Latest Commit" cells to jump to the stored release/commit path
 - Click column headers in the settings dialog to sort your repositories
 
+## Configuration
+
+GitHubFS stores its settings in `githubfs.ini` next to the plugin files.
+
+The `[Settings]` section supports:
+
+```ini
+[Settings]
+AutoUpdateRepos=0
+```
+
+- `AutoUpdateRepos=0` disables automatic update checks when opening the settings dialog (default)
+- `AutoUpdateRepos=1` runs the same action as the "Check Updates" button immediately when the settings dialog opens
+
+Each repository section stores the last checked release and commit metadata when known:
+
+```ini
+[Repo1]
+LatestRelease=v1.2.3
+LatestReleaseDate=2026-06-01T12:34:56Z
+LatestReleasePath=\MyRepo\[Releases]\v1.2.3
+LatestCommitSHA=0123456789abcdef0123456789abcdef01234567
+LatestCommitDate=2026-06-17T08:15:00Z
+LatestCommitPath=\MyRepo\main
+```
+
 ## Feedback & Contributions
+
+If you encounter any issues, have suggestions, or want to contribute to the project, please open an issue or submit a pull request on the [GitHubFS GitHub repository](https://github.com/adoeller/GitHubFS).
+
+Enjoy browsing your GitHub repositories in Total Commander with GitHubFS! 🚀
+
 
 If you encounter any issues, have suggestions, or want to contribute to the project, please open an issue or submit a pull request on the [GitHubFS GitHub repository](https://github.com/adoeller/GitHubFS).
 
