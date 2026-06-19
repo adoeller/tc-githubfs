@@ -3,6 +3,7 @@
 Browse GitHub repositories as a virtual file system directly in Total Commander's Network Neighborhood.
 
 ![Preview](Preview.png)
+![Versions](versions.png)
 
 ## Features
 
@@ -54,6 +55,16 @@ For maximum security, it's recommended to:
   - Repositories without a token use the REST release API individually
 - Double-click the "Latest Release" or "Latest Commit" cells to jump to the stored release/commit path
 - Click column headers in the settings dialog to sort your repositories
+- Open `[Check Updates]` in the GitHubFS root to run the same update check
+  without opening the configuration dialog
+
+### Custom columns
+
+GitHubFS provides three repository columns for Total Commander:
+
+- `Latest Release` shows the release tag and date stored by the update check
+- `Latest Commit` shows the short commit SHA and date stored by the update check
+- `Updated` shows `True` when the most recent update check detected a changed release or commit; otherwise it is empty
 
 ## Configuration
 
@@ -64,10 +75,13 @@ The `[Settings]` section supports:
 ```ini
 [Settings]
 AutoUpdateRepos=0
+ShowUpdateBox=0
 ```
 
 - `AutoUpdateRepos=0` disables automatic update checks when opening the settings dialog (default)
 - `AutoUpdateRepos=1` runs the same action as the "Check Updates" button immediately when the settings dialog opens
+- `ShowUpdateBox=0` refreshes the panel silently after the root update check (default)
+- `ShowUpdateBox=1` additionally shows the update summary dialog
 
 Each repository section stores the last checked release and commit metadata when known:
 
@@ -82,11 +96,6 @@ LatestCommitPath=\MyRepo\main
 ```
 
 ## Feedback & Contributions
-
-If you encounter any issues, have suggestions, or want to contribute to the project, please open an issue or submit a pull request on the [GitHubFS GitHub repository](https://github.com/adoeller/GitHubFS).
-
-Enjoy browsing your GitHub repositories in Total Commander with GitHubFS! 🚀
-
 
 If you encounter any issues, have suggestions, or want to contribute to the project, please open an issue or submit a pull request on the [GitHubFS GitHub repository](https://github.com/adoeller/GitHubFS).
 
